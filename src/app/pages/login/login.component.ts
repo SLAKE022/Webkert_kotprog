@@ -37,7 +37,7 @@ export class LoginComponent {
   login() {
     this.loginError = '';
     
-    if (this.email.value === 'test@gmail.com' && this.password.value === 'testpw') {
+    if (this.email.value === 'test@gmail.com' && this.password.value === '123456') {
       this.isLoading = true;
       this.showLoginForm = false;
       
