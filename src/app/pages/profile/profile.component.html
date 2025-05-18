@@ -1,0 +1,33 @@
+<div class="profile-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>User Profile</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ng-container *ngIf="isLoading; else profileContent">
+        <div class="loading-container">
+          <p>Loading profile data...</p>
+        </div>
+      </ng-container>
+
+      <ng-template #profileContent>
+        <ng-container *ngIf="user; else noUser">
+          <div class="user-details">
+            <h3 class="user-name">{{ user.name.firstname }} {{ user.name.lastname }}</h3>
+            <div class="user-address">
+              <mat-icon>location_on</mat-icon>
+              <span>{{ user.address }}</span>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-template #noUser>
+          <div class="empty-state">
+            <mat-icon>person_off</mat-icon>
+            <p>No user profile found. Please log in.</p>
+          </div>
+        </ng-template>
+      </ng-template>
+    </mat-card-content>
+  </mat-card>
+</div>

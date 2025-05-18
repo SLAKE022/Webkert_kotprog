@@ -1,0 +1,83 @@
+/* Teljes oldal sötét háttér, világos szöveg */
+body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Login doboz */
+.login-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Cím */
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+/* Űrlap elrendezés */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Material mezők szélessége */
+mat-form-field {
+  width: 100%;
+  color: #ffffff;
+}
+
+/* Gomb margók */
+button {
+  margin-top: 0.5rem;
+}
+
+/* Gomb közti távolság */
+button + button {
+  margin-left: 0.5rem;
+}
+
+/* Betöltés alatt */
+.loading-container {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #ccc;
+}
+
+.loading-container h2 {
+  margin-bottom: 1rem;
+  color: #90caf9;
+}
+
+/* Hibaüzenet */
+.error-message {
+  color: #ef5350;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Angular Material input mező sötét módhoz */
+.mat-form-field-infix {
+  color: #fff;
+}
+
+.mat-form-field-label {
+  color: #bbb !important;
+}
+
+.mat-input-element {
+  color: #fff;
+}
+
+.mat-icon {
+  color: #fff;
+}

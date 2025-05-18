@@ -1,0 +1,19 @@
+<tr>
+  <td>{{ product.name }}</td>
+  <td>{{ product.category }}</td>
+  <td>
+    <mat-checkbox 
+      color="primary" 
+      [checked]="product.isInStock" 
+      (change)="toggleStock()">
+    </mat-checkbox>
+  </td>
+  <td>{{ product.expireDate | date: 'yyyy-MM-dd' }}</td>
+  <td>
+    <button mat-button color="accent" class="edit-link">
+      <mat-icon>edit</mat-icon>
+      Szerkesztés
+    </button>
+  </td>
+</tr>
+

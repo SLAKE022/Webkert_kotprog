@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;      // A tartalom egymás alá kerül
+  justify-content: flex-start; // A tartalom a tetejére igazodik
+  align-items: center;         // A tartalom vízszintesen középre kerül
+  height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+}
+p{
+    color: black;
+}
+button {
+  background-color: #4CAF50; // Zöld háttér
+  color: white;              // Fehér szöveg
+  padding: 0.6rem 1.2rem;    // Belso térköz
+  border: none;              // Nincs keret
+  border-radius: 0.5rem;     // Lekerekített sarkok
+  font-size: 1rem;           // Alap betűméret
+  font-weight: 600;
+  cursor: pointer;           // Mutató ikon
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #45a049; // Sötétebb zöld
+    transform: scale(1.02);    // Kicsi nagyítás
+  }
+
+  &:active {
+    transform: scale(0.98);    // "Megnyomás" érzés
+  }
+
+  &:disabled {
+    background-color: #ccc;    // Szürkés, ha inaktív
+    cursor: not-allowed;
+    color: #666;
+  }
+}

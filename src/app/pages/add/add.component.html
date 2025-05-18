@@ -1,0 +1,37 @@
+<mat-card class="product-card">
+  <mat-card-header>
+    <mat-card-title>Termékek Hozzáadás</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="input-group">
+      <form [formGroup]="productForm">
+        <mat-form-field appearance="outline" class="product-input">
+          <mat-label>Termék neve</mat-label>
+          <input matInput formControlName="name" />
+          <mat-error *ngIf="getFormControlError('name')">{{ getFormControlError('name') }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="product-input">
+          <mat-label>Kategória</mat-label>
+          <input matInput formControlName="category" />
+          <mat-error *ngIf="getFormControlError('category')">{{ getFormControlError('category') }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="product-input">
+          <mat-label>Lejárati dátum</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="expireDate" />
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="getFormControlError('expireDate')">{{ getFormControlError('expireDate') }}</mat-error>
+        </mat-form-field>
+
+        <mat-checkbox formControlName="inStock">Raktáron van</mat-checkbox>
+
+        <button mat-flat-button color="primary" (click)="addProduct()" style="margin-left: 16px;">
+          Hozzáadás
+        </button>
+      </form>
+    </div>
+  </mat-card-content>
+</mat-card>

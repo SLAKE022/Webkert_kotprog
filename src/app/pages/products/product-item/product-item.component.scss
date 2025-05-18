@@ -1,0 +1,15 @@
+.edit-link {
+  color: #2e7d32; // a nice material green
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+mat-checkbox {
+  margin-top: -4px; // vertically center checkbox in table cell
+}
